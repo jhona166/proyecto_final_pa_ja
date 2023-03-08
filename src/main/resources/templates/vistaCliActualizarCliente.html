@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html mlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>   
+	<meta charset="UTF-8">   
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">   
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+
+<body class="p-3 mb-2 bg-dark text-white">   
+	<form th:action="@{/clientes/buscarcedula}" th:object="${cliente}" th:method="GET">
+		<table style="margin: 0 auto;">
+			<tr>
+				<td>
+					<label class="border border-success p-2 mb-2">CEDULA:</label>
+
+				</td>
+				<td>
+					<input
+						class="border border-success p-2 mb-2 border-bottom border border-0 p-3 mb-2 bg-dark text-white"
+						type="text" id="cedula" th:field="${cliente.cedula}">
+				</td>
+			</tr>
+
+		</table>
+
+		<div style="text-align:center;">
+			<input class="btn btn-outline-primary" type="submit" value="INGRESAR">
+		</div>
+	</form>
+	</form>
+	<form th:action="@{/clientes/funciones}">
+		<div style="text-align:center;">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<input class="btn btn-outline-primary" type="submit" value="REGRESAR">
+		</div>
+
+
+	</form>
+</body>
+
+</html>
